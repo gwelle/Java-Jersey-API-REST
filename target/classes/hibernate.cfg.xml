@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.password">password</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/jee</property>
+        <property name="hibernate.connection.username">guillaumewelle</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        
+        <property name="hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<property name="hibernate.allow_update_outside_transaction">true</property>
+		
+		<mapping class="org.eclipse.model.User" />
+		<mapping class="org.eclipse.model.Address" />
+		
+    </session-factory>
+</hibernate-configuration>
